@@ -1,0 +1,7 @@
+
+
+Certificat
+========
+- leboncoin.fr :
+    run  => keytool -import -keystore resources/my-truststore.jks -storepass changeit -alias localhost -file resources/leboncoin.fr.cer
+    add => -Djavax.net.ssl.trustStore=resources/my-truststore.jks
