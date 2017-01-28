@@ -1,16 +1,12 @@
 name := """homelist"""
 
-version := "1.0-SNAPSHOT"
+version := "1.0"
 
 lazy val root = (project in file(".")).enablePlugins(PlayScala)
 
 scalaVersion := "2.11.7"
 
-javaOptions += "-Djavax.net.ssl.trustStore=resources/my-truststore.jks"
-scalacOptions += "-Djavax.net.ssl.trustStore=resources/my-truststore.jks"
-
-scalacOptions in Test += "-Djavax.net.ssl.trustStore=resources/my-truststore.jks"
-javaOptions in Test ++= Seq("-Djavax.net.ssl.trustStore=resources/my-truststore.jks")
+javaOptions in Test += "-Djavax.net.ssl.trustStore=resources/trust-leboncoin.jks"
 
 libraryDependencies ++= Seq(
   jdbc,

@@ -1,3 +1,11 @@
 package model
 
-case class Ad(resume: Resume, detail: Detail)
+import java.util.UUID
+import models._
+
+case class Ad(
+     id: UUID,
+     resume: Resume,
+     detail: Detail,
+     source: Source
+)
